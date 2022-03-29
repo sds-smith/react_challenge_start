@@ -1,6 +1,7 @@
 import React from "react";
+import { ContactForm } from "../../components/contactForm/ContactForm";
 
-export const ContactsPage = () => {
+export const ContactsPage = (contacts, addContact) => {
   /*
   Define state variables for 
   contact info and duplicate check
