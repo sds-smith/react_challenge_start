@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ContactForm } from "../../components/contactForm/ContactForm";
 import { TileList } from "../../components/tileList/TileList";
 
-export const ContactsPage = (contacts, addContact) => {
+export const ContactsPage = ({contacts, addContact}) => {
 
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
@@ -20,10 +20,10 @@ export const ContactsPage = (contacts, addContact) => {
   };
 
   useEffect(name => {
-    contacts.forEach(contact => {
-      if (contact.name === name) {
+    contacts.forEach(cont => {
+      if (cont.name === name) {
         setIsDup(true)
-        window.alert('Contact already exists with this name')
+        window.alert('There is already a contact with that name.')
       }
     })
   })

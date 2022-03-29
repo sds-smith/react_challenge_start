@@ -14,9 +14,9 @@ export const ContactForm = ({
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type='text' id='name'>Contact Name</input>
-      <input type='tel' id='phone'>Contact Phone Number</input>
-      <input type='email' id='email' >Contact Email Address</input>
+      <input type='text' id='name' onChange={setName}/>
+      <input type='tel' id='phone' onChange={setPhone}/>
+      <input type='email' id='email' onChange={setEmail}/>
       <button type='submit' id='submit' />
     </form>
   );
