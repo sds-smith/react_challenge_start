@@ -1,5 +1,5 @@
 import React from "react";
-
+import { ContactPicker } from '../contactPicker/ContactPicker'
 export const AppointmentForm = ({
   contacts,
   title,
@@ -20,6 +20,11 @@ export const AppointmentForm = ({
   };
 
   return (
-    AppointmentForm
+    <form onSubmit={handleSubmit}>
+      <input />
+      <input />
+      <input />
+      <ContactPicker />
+    </form>
   );
 };
