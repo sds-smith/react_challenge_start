@@ -20,10 +20,10 @@ export const AppointmentsPage = (props) => {
     setContact('')
     setDate('')
     setTime('')
-    document.querySelector('').value = ''
-    document.querySelector('').value = ''
-    document.querySelector('').value = ''
-    document.querySelector('').value = ''
+    document.getElementById('title').value = ''
+    document.getElementById('date').value = ''
+    document.getElementById('time').value = ''
+    document.getElementById('contact').value = ''
    
   };
 
@@ -33,16 +33,21 @@ export const AppointmentsPage = (props) => {
         <h2>Add Appointment</h2>
         <AppointmentForm 
               title={title} 
-              contact={contact} 
+              setTitle={setTitle}
+              contact={contact}
+              setContact={setContact}
               date={date} 
+              setDate={setDate}
               time={time}
+              setTime={setTime}
               handleSubmit={handleSubmit}
+              contacts={contacts}
         />
       </section>
       <hr />
       <section>
         <h2>Appointments</h2>
-        <TileList appointments={appointments} />
+        <TileList list={appointments} />
       </section>
     </div>
   );
