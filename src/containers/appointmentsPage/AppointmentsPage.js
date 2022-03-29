@@ -1,10 +1,10 @@
 import React from "react";
 
-export const AppointmentsPage = () => {
-  /*
-  Define state variables for 
-  appointment info
-  */
+export const AppointmentsPage = (props) => {
+
+  const appointments = props.appointments 
+  const contacts = props.contacts 
+  const addAppointment = props.addAppointment
 
   const handleSubmit = (e) => {
     e.preventDefault();
