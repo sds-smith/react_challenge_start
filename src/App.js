@@ -8,16 +8,19 @@ function App() {
 
   const [contacts, setContacts] = useState([])
   const [appointments, setAppointments] = useState([])
-  
+
   const ROUTES = {
     CONTACTS: "/contacts",
     APPOINTMENTS: "/appointments",
   };
 
-  /*
-  Implement functions to add data to
-  contacts and appointments
-  */
+  const addContact = (contact) => {
+    setContacts([...contacts, contact])
+  }
+
+  const addAppointment = (appointment) => {
+    setAppointments([...appointments, appointment])
+  }
 
   return (
     <>
@@ -36,11 +39,11 @@ function App() {
           </Route>
           <Route path={ROUTES.CONTACTS}>
              {/* Add props to ContactsPage */}
-            <ContactsPage />
+            <ContactsPage contacts={contacts} addContact={addContact} />
           </Route>
           <Route path={ROUTES.APPOINTMENTS}>
             {/* Add props to AppointmentsPage */}
-            <AppointmentsPage />
+            <AppointmentsPage appointments={appointments} contacts={contacts} addAppointment={addAppointment} />
           </Route>
         </Switch>
       </main>
