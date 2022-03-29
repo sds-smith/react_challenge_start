@@ -14,12 +14,12 @@ function App() {
     APPOINTMENTS: "/appointments",
   };
 
-  const addContact = (contact) => {
-    setContacts([...contacts, contact])
+  const addContact = (name, phone, email) => {
+    setContacts(prev => [...prev, {name, phone, email}])
   }
 
-  const addAppointment = (appointment) => {
-    setAppointments([...appointments, appointment])
+  const addAppointment = (title, contact, date, time) => {
+    setAppointments(prev => [...prev, {title, contact, date, time}])
   }
 
   return (
